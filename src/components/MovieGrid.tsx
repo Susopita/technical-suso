@@ -7,6 +7,7 @@ interface MovieGridProps {
 }
 
 export function MovieGrid({ movies }: MovieGridProps) {
+    console.log("Movies:", movies);
     if (!movies || movies.length === 0) {
         return (
             <div className="flex items-center justify-center p-12">

@@ -1,13 +1,6 @@
-import Api from "@/api/api";
+import { DiscoverMoviesParams, useDiscoverMovies } from "./useDiscoverMovies";
 
-interface PopularMoviesParams {
-    language?: string;
-    page?: number;
-    region?: string;
-}
-
-export async function usePopularMovies(params: PopularMoviesParams = {}) {
-    const api = await Api.getInstance();
+export async function usePopularMovies(params: DiscoverMoviesParams = {}) {
 
     const {
         language = "en-US",
@@ -21,10 +14,5 @@ export async function usePopularMovies(params: PopularMoviesParams = {}) {
         ...rest
     };
 
-    const response = await api.get<void, PaginatedMovies>({
-        url: "/movie/popular",
-        params: requestParams,
-    });
-
-    return response.data;
+    return await useDiscoverMovies(requestParams);
 }

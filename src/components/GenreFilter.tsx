@@ -27,6 +27,7 @@ export function GenreFilter({ onFilterChange }: GenreFilterProps) {
     }, []);
 
     const handleFilter = (gender: string) => {
+        console.log("Gender:", genres.find((genre) => genre.id === Number(gender)));
         if (gender === '-1') {
             setSelectedGenre('');
             onFilterChange(-1);

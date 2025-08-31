@@ -8,32 +8,58 @@ import { SearchBar } from '@/components/SearchBar';
 import { GenreFilter } from '@/components/GenreFilter';
 import { Pagination } from '@/components/Pagination';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { useDiscoverMovies } from '@/hooks/useDiscoverMovies';
 
 const fetchPopularMovies = async (page = 1) => {
-  const { results, total_pages } = await usePopularMovies({ page });
+  const { results, total_pages } = await usePopularMovies({
+    page,
+    include_adult: false,
+  });
   return { results, total_pages };
 };
 
 export default function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [currentPageFilter, setCurrentPageFilter] = useState(1);
   const [movies, setMovies] = useState<Movie[]>([]);
   const [showFilter, setShowFilter] = useState(false);
   const [filteredMovies, setFilteredMovies] = useState<Movie[]>([]);
   const [totalPages, setTotalPages] = useState(0);
+  const [totalPagesFilter, setTotalPagesFilter] = useState(0);
   const [genreId, setGenreId] = useState(-1);
 
+  const loadMovies = async () => {
+    const { results, total_pages } = await fetchPopularMovies(
+      currentPage
+    );
+    setMovies(results);
+    setTotalPages(total_pages);
+  };
+
+  const loadMoviesFilter = async () => {
+    const { total_pages, results } = await useDiscoverMovies({
+      with_genres: `${genreId}`,
+      include_adult: false,
+      page: currentPage,
+    });
+    setFilteredMovies(results);
+    setTotalPagesFilter(total_pages);
+  };
+
   useEffect(() => {
-    const loadMovies = async () => {
-      const { results, total_pages } = await fetchPopularMovies(currentPage);
-      setMovies(results);
-      setTotalPages(total_pages);
-    };
     loadMovies();
-    handleFilterChange(genreId);
   }, [currentPage]);
+
+  useEffect(() => {
+    loadMoviesFilter();
+  }, [currentPageFilter]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+  };
+
+  const handlePageChangeFilter = (page: number) => {
+    setCurrentPageFilter(page);
   };
 
   const handleFilterChange = (genreId: number) => {
@@ -44,28 +70,12 @@ export default function HomePage() {
     setGenreId(genreId);
 
     if (genreId === -1) {
-      setFilteredMovies([]);
+      setCurrentPageFilter(1);
       setShowFilter(false);
       return;
     }
 
-    let pageLocal = currentPage + 1;
-    let moviesLocal = movies;
-    setFilteredMovies([]);
-    while (filteredMovies.length < 20 && pageLocal !== totalPages) {
-      moviesLocal.map((movie) => {
-        if (movie.genre_ids.includes(genreId)) {
-          setFilteredMovies((prev) => [...prev, movie]);
-        }
-      });
-      const updateLocal = async () => {
-        const { results } = await fetchPopularMovies(pageLocal);
-        moviesLocal = results;
-        pageLocal++;
-      }
-      updateLocal();
-      console.log("Filtered movies:", filteredMovies);
-    }
+    loadMoviesFilter();
     setShowFilter(true);
   };
 
@@ -86,11 +96,19 @@ export default function HomePage() {
       </main>
 
       <footer className="py-4">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+        {showFilter ? (
+          <Pagination
+            currentPage={currentPageFilter}
+            totalPages={totalPagesFilter}
+            onPageChange={handlePageChangeFilter}
+          />
+        ) : (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        )}
       </footer>
     </div>
   );
