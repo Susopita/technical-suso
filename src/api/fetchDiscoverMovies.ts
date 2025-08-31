@@ -59,7 +59,7 @@ export interface DiscoverMoviesParams {
     year?: number;
 }
 
-export async function useDiscoverMovies(params: DiscoverMoviesParams) {
+export async function fetchDiscoverMovies(params: DiscoverMoviesParams) {
     const {
         language = "en-US",
         page = 1,

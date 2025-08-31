@@ -5,7 +5,7 @@ interface SimilarMoviesParams {
     page?: number;
 }
 
-export async function useSimilarMovies(movieId: number, params: SimilarMoviesParams = {}) {
+export async function fetchSimilarMovies(movieId: number, params: SimilarMoviesParams = {}) {
     const api = await Api.getInstance();
 
     const {

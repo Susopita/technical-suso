@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useMovieGenres } from '@/hooks/useMovieGenres';
+import { fetchMovieGenres } from '@/api/fetchMovieGenres';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Genres } from '@/interfaces/movies/Genres';
 import { SelectGroup, SelectLabel } from '@radix-ui/react-select';
@@ -17,7 +17,7 @@ export function GenreFilter({ onFilterChange }: GenreFilterProps) {
     useEffect(() => {
         async function fetchGenres() {
             try {
-                const data = await useMovieGenres();
+                const data = await fetchMovieGenres();
                 setGenres(data.genres);
             } catch (error) {
                 console.error("Error fetching genres:", error);

@@ -4,7 +4,7 @@ interface GenresParams {
     language?: string;
 }
 
-export async function useMovieGenres(params: GenresParams = {}) {
+export async function fetchMovieGenres(params: GenresParams = {}) {
     const api = await Api.getInstance();
 
     // Destructuring with default value

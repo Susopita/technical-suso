@@ -5,7 +5,7 @@ interface MovieDetailsParams {
     language?: string;
 }
 
-export async function useMovieDetails(movieId: number, params: MovieDetailsParams = {}) {
+export async function fetchMovieDetails(movieId: number, params: MovieDetailsParams = {}) {
     const api = await Api.getInstance();
 
     const {

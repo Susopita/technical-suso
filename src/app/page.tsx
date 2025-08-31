@@ -1,22 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { usePopularMovies } from '@/hooks/usePopularMovies';
+import { fetchPopularMovies } from '@/api/fetchPopularMovies';
 
 import { MovieGrid } from '@/components/MovieGrid';
 import { SearchBar } from '@/components/SearchBar';
 import { GenreFilter } from '@/components/GenreFilter';
 import { Pagination } from '@/components/Pagination';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
-import { useDiscoverMovies } from '@/hooks/useDiscoverMovies';
-
-const fetchPopularMovies = async (page = 1) => {
-  const { results, total_pages } = await usePopularMovies({
-    page,
-    include_adult: false,
-  });
-  return { results, total_pages };
-};
+import { fetchDiscoverMovies } from '@/api/fetchDiscoverMovies';
 
 export default function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,15 +21,15 @@ export default function HomePage() {
   const [genreId, setGenreId] = useState(-1);
 
   const loadMovies = async () => {
-    const { results, total_pages } = await fetchPopularMovies(
-      currentPage
-    );
+    const { results, total_pages } = await fetchPopularMovies({
+      page: currentPage,
+    });
     setMovies(results);
     setTotalPages(total_pages);
   };
 
   const loadMoviesFilter = async () => {
-    const { total_pages, results } = await useDiscoverMovies({
+    const { total_pages, results } = await fetchDiscoverMovies({
       with_genres: `${genreId}`,
       include_adult: false,
       page: currentPage,
