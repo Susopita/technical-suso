@@ -1,9 +1,11 @@
 # Evaluación Frontend - Next.js & React
 
 ## 🎯 Objetivo
+
 Evaluar las habilidades técnicas y teóricas de desarrollo frontend utilizando tecnologías modernas.
 
 ## 🛠️ Stack Tecnológico Requerido
+
 - **Next.js 14+** (App Router)
 - **TypeScript**
 - **Tailwind CSS** (recomendado)
@@ -15,16 +17,19 @@ Evaluar las habilidades técnicas y teóricas de desarrollo frontend utilizando 
 ## 📋 Caso Práctico: Dashboard de Películas
 
 ### Descripción del Proyecto
+
 Desarrollar una aplicación web que permita explorar películas utilizando la API pública de **The Movie Database (TMDB)**. La aplicación debe incluir funcionalidades de búsqueda, filtrado y visualización detallada de películas.
 
 ### 🔗 API a Utilizar
-- **TMDB API**: https://developers.themoviedb.org/3
+
+- **TMDB API**: <https://developers.themoviedb.org/3>
 - Necesitarás registrarte para obtener una API key gratuita
-- Documentación: https://developers.themoviedb.org/3/getting-started/introduction
+- Documentación: <https://developers.themoviedb.org/3/getting-started/introduction>
 
 ### ✅ Funcionalidades Requeridas
 
 #### Páginas Obligatorias
+
 1. **Página Principal** (`/`)
    - Lista de películas populares
    - Barra de búsqueda
@@ -43,6 +48,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
    - Estado de carga y errores
 
 #### Funcionalidades Técnicas
+
 - **Rutas Dinámicas**: Implementar `/movie/[id]` para mostrar detalles
 - **Server Components**: Utilizar cuando sea apropiado
 - **Client Components**: Para interactividad (búsqueda, filtros)
@@ -52,6 +58,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 - **SEO**: Metadatos dinámicos para cada película
 
 ### 🎨 Requerimientos de UI/UX
+
 - Diseño limpio y moderno
 - Uso de shadcn/ui para componentes (recomendado)
 - Implementar modo oscuro/claro (opcional)
@@ -59,6 +66,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 - Estados de carga atractivos
 
 ### 🚀 Extras (Opcionales)
+
 - Implementar favoritos (usando localStorage)
 - Filtros avanzados (año, rating, duración)
 - Infinite scroll en lugar de paginación
@@ -66,6 +74,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 - PWA capabilities
 
 ### 📦 Entregables
+
 1. **Código fuente** en repositorio GitHub
 2. **Aplicación desplegada** en Vercel
 3. **README** con:
@@ -75,7 +84,9 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
    - URL de la aplicación en vivo
 
 ### ⏱️ Tiempo Límite
-**12 horas máximo** 
+
+**12 horas máximo**
+
 - Setup inicial y estructura: 2 horas
 - Página principal: 4 horas
 - Página de detalle: 3 horas
@@ -83,6 +94,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 - Despliegue: 1 hora
 
 ### 🎯 Enfoque de Desarrollo Recomendado
+
 1. **Horas 1-2**: Setup del proyecto, configuración básica, estructura de carpetas
 2. **Horas 3-6**: Página principal con grid de películas y búsqueda básica
 3. **Horas 7-9**: Página de detalle con ruta dinámica
@@ -90,6 +102,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 5. **Hora 12**: Despliegue en Vercel y documentación
 
 ### 🔍 Criterios de Evaluación
+
 - **Funcionalidad core completada** (30%)
 - **Implementación correcta de Next.js App Router** (25%)
 - **Uso de TypeScript** (20%)
@@ -147,6 +160,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 ## 🎯 Rúbrica de Evaluación
 
 ### Proyecto Práctico (70%)
+
 | Criterio | Excelente (4) | Bueno (3) | Regular (2) | Deficiente (1) |
 |----------|---------------|-----------|-------------|----------------|
 | **Arquitectura** | Código bien organizado, patrones claros, separación de responsabilidades | Estructura clara con pequeñas mejoras posibles | Organización básica pero funcional | Código desorganizado, difícil de seguir |
@@ -155,6 +169,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 | **UI/UX** | Diseño pulido, responsive, excelente UX | Diseño atractivo y funcional | Diseño básico pero usable | Diseño pobre o no responsive |
 
 ### Preguntas Teóricas (30%)
+
 - **Conceptos Fundamentales**: 40% del peso
 - **Patrones y Arquitectura**: 35% del peso  
 - **Optimización y Performance**: 25% del peso
@@ -164,11 +179,13 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 ## 📋 Checklist de Entrega
 
 ### Antes de la Evaluación
+
 - [ ] Enviar el caso práctico con al menos 5 días de anticipación
 - [ ] Proporcionar API key de TMDB o instrucciones para obtenerla
 - [ ] Clarificar tiempo límite y criterios de evaluación
 
 ### Durante la Revisión
+
 - [ ] Verificar funcionamiento en producción
 - [ ] Revisar código en GitHub
 - [ ] Evaluar arquitectura y patrones utilizados
@@ -176,6 +193,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 - [ ] Analizar decisiones técnicas en el README
 
 ### Entrevista Técnica
+
 - [ ] Preguntas sobre decisiones tomadas en el proyecto
 - [ ] Conceptos teóricos fundamentales
 - [ ] Discusión sobre optimizaciones posibles
@@ -186,6 +204,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 ## 💡 Consejos para Candidatos
 
 ### Para el Proyecto
+
 - Inicia con un MVP funcional y luego agrega features
 - Documenta tus decisiones técnicas en el README
 - Implementa manejo de errores desde el principio
@@ -193,6 +212,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 - No olvides hacer commits frecuentes con mensajes claros
 
 ### Para las Preguntas
+
 - Proporciona ejemplos de código cuando sea posible
 - Explica no solo el "qué" sino también el "por qué"
 - Si no sabes algo, sé honesto y explica cómo lo investigarías
@@ -201,6 +221,7 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 ---
 
 ## 🔗 Recursos Útiles
+
 - [Next.js Documentation](https://nextjs.org/docs)
 - [React Documentation](https://react.dev)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
@@ -211,4 +232,5 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 ---
 
 **Tiempo estimado total de evaluación: 12 horas**
+
 - Proyecto práctico: 12 horas máximo
