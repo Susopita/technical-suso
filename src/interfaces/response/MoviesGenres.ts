@@ -1,0 +1,3 @@
+interface MoviesGenres {
+    genres: Genres[];
+}

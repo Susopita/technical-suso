@@ -115,45 +115,45 @@ Desarrollar una aplicación web que permita explorar películas utilizando la AP
 
 ### React Fundamentals (6 preguntas)
 
-**1. ¿Cuál es la diferencia entre `useState` y `useEffect`? Proporciona un ejemplo de cada uno.**
+[**1. ¿Cuál es la diferencia entre `useState` y `useEffect`? Proporciona un ejemplo de cada uno.**](docs/technical-questions.md#1-cuál-es-la-diferencia-entre-usestate-y-useeffect-proporciona-un-ejemplo-de-cada-uno)
 
-**2. ¿Qué hace React.memo() y cuándo lo usarías?**
+[**2. ¿Qué hace React.memo() y cuándo lo usarías?**](docs/technical-questions.md#2-qué-hace-reactmemo-y-cuándo-lo-usarías)
 
-**3. ¿Cómo pasarías datos entre componentes padre e hijo en React?**
+[**3. ¿Cómo pasarías datos entre componentes padre e hijo en React?**](docs/technical-questions.md#3-cómo-pasarías-datos-entre-componentes-padre-e-hijo-en-react)
 
-**4. ¿Cuál es la diferencia entre un componente controlado y no controlado?**
+[**4. ¿Cuál es la diferencia entre un componente controlado y no controlado?**](docs/technical-questions.md#4-cuál-es-la-diferencia-entre-un-componente-controlado-y-no-controlado)
 
-**5. ¿Qué son las keys en React y por qué son importantes?**
+[**5. ¿Qué son las keys en React y por qué son importantes?**](docs/technical-questions.md#5-qué-son-las-keys-en-react-y-por-qué-son-importantes)
 
-**6. Explica qué hace `useCallback` con un ejemplo práctico.**
+[**6. Explica qué hace `useCallback` con un ejemplo práctico.**](docs/technical-questions.md#6-explica-qué-hace-usecallback-con-un-ejemplo-práctico)
 
 ### Next.js Específico (6 preguntas)
 
-**7. ¿Cuál es la diferencia principal entre Server Components y Client Components?**
+[**7. ¿Cuál es la diferencia principal entre Server Components y Client Components?**](docs/technical-questions.md#7-cuál-es-la-diferencia-principal-entre-server-components-y-client-components)
 
-**8. ¿Cómo crear una ruta dinámica `/product/[id]` en App Router?**
+[**8. ¿Cómo crear una ruta dinámica `/product/[id]` en App Router?**](docs/technical-questions.md#8-cómo-crear-una-ruta-dinámica-productid-en-app-router)
 
-**9. ¿Qué son los archivos `loading.tsx` y `error.tsx` en App Router?**
+[**9. ¿Qué son los archivos `loading.tsx` y `error.tsx` en App Router?**](docs/technical-questions.md#9-qué-son-los-archivos-loadingtsx-y-errortsx-en-app-router)
 
-**10. ¿Cómo hacer fetch de datos en un Server Component?**
+[**10. ¿Cómo hacer fetch de datos en un Server Component?**](docs/technical-questions.md#10-cómo-hacer-fetch-de-datos-en-un-server-component)
 
-**11. ¿Cuándo y por qué usarías "use client" en un componente?**
+[**11. ¿Cuándo y por qué usarías "use client" en un componente?**](docs/technical-questions.md#11-cuándo-y-por-qué-usarías-use-client-en-un-componente)
 
-**12. ¿Cómo desplegar una aplicación Next.js en Vercel?**
+[**12. ¿Cómo desplegar una aplicación Next.js en Vercel?**](docs/technical-questions.md#12-cómo-desplegar-una-aplicación-nextjs-en-vercel)
 
 ### TypeScript & Best Practices (6 preguntas)
 
-**13. ¿Cómo definirías tipos para las props de un componente React?**
+[**13. ¿Cómo definirías tipos para las props de un componente React?**](docs/technical-questions.md#13-cómo-definirías-tipos-para-las-props-de-un-componente-react)
 
-**14. ¿Cuál es la diferencia entre `interface` y `type` en TypeScript?**
+[**14. ¿Cuál es la diferencia entre `interface` y `type` en TypeScript?**](docs/technical-questions.md#14-cuál-es-la-diferencia-entre-interface-y-type-en-typescript)
 
-**15. ¿Qué estrategias usarías para hacer tu aplicación responsive con Tailwind?**
+[**15. ¿Qué estrategias usarías para hacer tu aplicación responsive con Tailwind?**](docs/technical-questions.md#15-qué-estrategias-usarías-para-hacer-tu-aplicación-responsive-con-tailwind)
 
-**16. ¿Cómo manejarías errores de API en una aplicación Next.js?**
+[**16. ¿Cómo manejarías errores de API en una aplicación Next.js?**](docs/technical-questions.md#16-cómo-manejarías-errores-de-api-en-una-aplicación-nextjs)
 
-**17. ¿Qué es el prop drilling y cómo lo evitarías?**
+[**17. ¿Qué es el prop drilling y cómo lo evitarías?**](docs/technical-questions.md#17-qué-es-el-prop-drilling-y-cómo-lo-evitarías)
 
-**18. Menciona 3 buenas prácticas para optimizar el rendimiento en React.**
+[**18. Menciona 3 buenas prácticas para optimizar el rendimiento en React.**](docs/technical-questions.md#18-menciona-3-buenas-prácticas-para-optimizar-el-rendimiento-en-react)
 
 ---
 
